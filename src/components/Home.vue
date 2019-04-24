@@ -1,6 +1,24 @@
 <template>
   <div>
-    <b-container fluid class="p-4 bg-dark">
+    <Slider
+      animation="fade"
+      v-model="sliderValue"
+      :duration="5000"
+      :speed="1000"
+    >
+      <SliderItem
+        v-for="(i, index) in list"
+        :key="index"
+        @click="changeIndex(1);"
+        :style="i"
+      >
+        <p style="line-height: 280px; font-size: 5rem; text-align: center;">
+          Page{{ index + 1 }}
+        </p>
+      </SliderItem>
+    </Slider>
+    
+    <!-- <b-container fluid class="p-4 bg-dark">
       <b-row>
         <b-col>
           <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=54" alt="Image 1"></b-img>
@@ -29,7 +47,7 @@
           <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=59" alt="Image 3"></b-img>
         </b-col>
       </b-row>
-    </b-container>  
+    </b-container>   -->
     <div class="triangle-down">
       <div id="triangle-down"></div>
     </div>
@@ -81,6 +99,57 @@
     </b-container>  
   </div> 
 </template>
+<script>
+import { Slider, SliderItem } from "vue-easy-slider";
+
+export default {
+  name: "App",
+  components: {
+    Slider,
+    SliderItem
+  },
+  data() {
+    return {
+      list: [],
+      sliderValue: 2
+    };
+  },
+  methods: {
+    changeIndex(index) {
+      this.sliderValue = index;
+    }
+  },
+  mounted() {
+    setTimeout(
+      () =>
+        (this.list = [
+          {
+            backgroundColor: "#3f51b5",
+            width: "100%",
+            height: "100%"
+          },
+          {
+            backgroundColor: "#eee",
+            width: "100%",
+            height: "100%"
+          },
+          {
+            backgroundColor: "#f44336",
+            width: "100%",
+            height: "100%"
+          },
+          {
+            backgroundColor: "#eee",
+            width: "100%",
+            height: "100%"
+          }
+        ]),
+      1000
+    );
+  }
+};
+</script>
+
 
 
 

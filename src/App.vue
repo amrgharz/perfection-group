@@ -25,8 +25,8 @@
       </ul>
     </div>
     <div class="logo">
-      <img src="../pictures/logo.png"/>
-      <span class="site-identity">We build a Project to suit your needs from the foundation to the key delivering.</span>
+      <img src="pictures/logo.png"/>
+      <span class="site-identity">Your Project Is Our Business.</span>
     </div >
     <div class="main-nav">
       <b-navbar toggleable="lg" type="light" >

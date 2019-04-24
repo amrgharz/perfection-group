@@ -9,8 +9,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import VueCarousel from 'vue-carousel';
 
-
+Vue.use(VueCarousel);
+ 
 library.add(faCoffee)
 
 library.add(faTwitter)
@@ -23,12 +25,10 @@ Vue.config.productionTip = false
 
 Vue.use(BootstrapVue)
 
-Vue.config.productionTip = false
-
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: { App},
   template: '<App/>',
  
 })
