@@ -24,19 +24,17 @@
         </li>
       </ul>
     </div>
-    <div class="logo">
-      <img src="pictures/logo.png"/>
-      <span class="site-identity">Your Project Is Our Business.</span>
-    </div >
     <div class="main-nav">
-      <b-navbar toggleable="lg" type="light" >
-
+      <b-navbar toggleable="lg" type="light"  >
+           <a class="navbar-brand" href="#">
+             <b-img src="pictures/logo.png" fluid></b-img>
+           </a>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="mx-auto sapces">
           <b-link to= "/" class="mr-5 mt-2">Home</b-link>
-          <b-nav-item-dropdown class="nav-dropdown mr-5"  text="Our Projects" >
+          <b-nav-item-dropdown class="nav-dropdown mr-5"  text="Our Projects" right >
             <b-dropdown-item href="#">Our Vision & Mission</b-dropdown-item>
             <b-dropdown-item href="#">Our Profile</b-dropdown-item>
             <b-dropdown-item href="#">Our Strength</b-dropdown-item>
