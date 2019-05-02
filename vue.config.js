@@ -1,4 +1,8 @@
  // vue.config.js
- module.exports = {
-    publicPath: ‘<perfection-group>’
-   } 
+   module.exports = {
+      // ...
+      build: {
+        assetsPublicPath: '/',
+        assetsSubDirectory: 'static'
+      }
+    }

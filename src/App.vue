@@ -27,7 +27,7 @@
     <div class="main-nav">
       <b-navbar toggleable="lg" type="light"  >
            <a class="navbar-brand" href="#">
-             <b-img src="pictures/logo.png" fluid></b-img>
+             <b-img src="static/logo.png"></b-img>
            </a>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
